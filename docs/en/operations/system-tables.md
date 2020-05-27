@@ -675,7 +675,9 @@ You can specify an arbitrary partitioning key for the `system.query_log` table i
 
 ## system.query\_thread\_log {#system_tables-query-thread-log}
 
-ClickHouse creates this table only if the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server parameter is specified. This parameter sets the logging rules, such as the logging interval or the name of the table the queries will be logged in. The table contains information about each query execution thread.
+The table contains information about each query execution thread.
+
+ClickHouse creates this table only if the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server parameter is specified. This parameter sets the logging rules, such as the logging interval or the name of the table the queries will be logged in. 
 
 !!! note "Note"
     The storage period for logs is unlimited. Logs aren’t automatically deleted from the table. You need to organize the removal of outdated logs yourself.
