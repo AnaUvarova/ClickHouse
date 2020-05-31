@@ -733,14 +733,14 @@ Settings.Values:      ['0','random','1','10000000000']
 
 The table contains information about each query execution thread.
 
-ClickHouse creates this table only if the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server parameter is specified. This parameter sets the logging rules, such as the logging interval or the name of the table the queries will be logged in. 
+ClickHouse creates this table only if the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query_thread_log) server parameter is specified. This parameter sets the logging rules, such as the logging interval or the name of the table the queries will be logged in. 
 
 !!! note "Note"
     The storage period for logs is unlimited. Logs aren’t automatically deleted from the table. You need to organize the removal of outdated logs yourself.
 
-To enable query logging, set the [log\_query\_threads](settings/settings.md#settings-log-query-threads) parameter to 1. For details, see the [Settings](settings/settings.md) section.
+To enable query logging, set the [log\_query\_threads](settings/settings.md#settings-log-query-threads) parameter to 1. For details, see the [Settings](settings/settings.md) section. 
 
-The flushing period of logs is set in `flush_interval_milliseconds` parameter of the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server settings section. To force flushing logs, use the [SYSTEM FLUSH LOGS](../sql-reference/statements/system.md#query_language-system-flush_logs) query.
+The flushing period of logs is set in `flush_interval_milliseconds` parameter of the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query_thread_log) server settings section. To force flushing logs, use the [SYSTEM FLUSH LOGS](../sql-reference/statements/system.md#query_language-system-flush_logs) query.
 
 An arbitrary partitioning key parameter is set in the `system.query_thread_log` table of the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server setting. Use the `partition_by` parameter for setting it.
 
