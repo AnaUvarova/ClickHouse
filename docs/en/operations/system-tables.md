@@ -740,11 +740,11 @@ ClickHouse creates this table only if the [query\_thread\_log](server-configurat
 
 To enable query logging, set the [log\_query\_threads](settings/settings.md#settings-log-query-threads) parameter to 1. For details, see the [Settings](settings/settings.md) section.
 
-By default, logs are added to the table at intervals of 7.5 seconds. You can set this interval in the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server setting (see the `flush_interval_milliseconds` parameter). To flush the logs forcibly from the memory buffer into the table, use the `SYSTEM FLUSH LOGS` query.
+The flushing period of logs is set in `flush_interval_milliseconds` parameter of the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server settings section. To force flushing logs, use the [SYSTEM FLUSH LOGS](../sql-reference/statements/system.md#query_language-system-flush_logs) query.
 
-When the table is deleted manually, it will be automatically created on the fly. Note that all the previous logs will be deleted.
+An arbitrary partitioning key parameter is set in the `system.query_thread_log` table of the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server setting. Use the `partition_by` parameter for setting it.
 
-You can specify an arbitrary partitioning key for the `system.query_thread_log` table in the [query\_thread\_log](server-configuration-parameters/settings.md#server_configuration_parameters-query-thread-log) server setting (see the `partition_by` parameter).
+ClickHouse doesn't delete logs from the table automatically. See [Introduction](#system-tables-introduction) for more details.
 
 Columns:
 
