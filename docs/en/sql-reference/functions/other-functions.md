@@ -1201,3 +1201,40 @@ SELECT number, randomPrintableASCII(30) as str, length(str) FROM system.numbers 
 ```
 
 [Original article](https://clickhouse.tech/docs/en/query_language/functions/other_functions/) <!--hide-->
+
+## randomFixedString {#randomfixedstring}
+
+Accepts natural number of the length variable. Returnes generated random string with fixed length.
+
+**Syntax**
+
+``` sql
+randomFixedString(length);
+```
+
+**Parameters**
+
+-   `length` — Length to put in the function number of symbols we need to generate. Length is a natural number. [UInt64](../../sql-reference/data-types/int-uint.md).
+
+**Returned value(s)**
+
+-   String contains generated random symbols.
+
+Type: [String](../../sql-reference/data-types/string.md).
+
+**Example**
+
+Query:
+
+```sql 
+SELECT randomFixedString(13)
+```
+
+Result:
+
+```text 
+    ┌─randomFixedString(13)─┐
+    │ ▒E▒\▒▒{ ki▒▒▒         │
+    └───────────────────────┘
+
+```
