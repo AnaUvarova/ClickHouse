@@ -137,6 +137,76 @@ SELECT * FROM system.contributors WHERE name='Olga Khvostikova'
 └──────────────────┘
 ```
 
+## system.licenses {#system-tables_system.licenses} system.licenses
+
+Variety of the system licenses could be. 
+
+Columns:
+
+- `library_name` ([String](../sql-reference/data-types/string.md)) — Name of the library, which is license connected with.
+- `license_type` ([String](../sql-reference/data-types/string.md)) — Type of the system licenses — e.g. Apache, MIT. 
+- `license_path` ([String](../sql-reference/data-types/string.md)) — Path to the specific license. Where you can find it. Could be txt-formatted.
+- `license_text` ([String](../sql-reference/data-types/string.md)) — Textual content of the license. Legacy,  terms and conditions and so on. Could be very long, you know.
+
+**Example**
+
+``` sql
+SELECT * FROM system.licenses LIMIT 1 FORMAT Vertical
+```
+
+``` text
+library_name: FastMemcpy
+license_type: MIT
+license_path: /contrib/FastMemcpy/LICENSE
+license_text: The MIT License (MIT)
+
+Copyright (c) 2015 Linwei
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+One more example to make you understand the essence. 
+``` sql
+SELECT library_name, license_type, license_path FROM system.licenses LIMIT 15
+```
+
+``` text
+┌─library_name───────┬─license_type─┬─license_path────────────────────────┐
+│ FastMemcpy         │ MIT          │ /contrib/FastMemcpy/LICENSE         │
+│ arrow              │ Apache       │ /contrib/arrow/LICENSE.txt          │
+│ avro               │ Apache       │ /contrib/avro/LICENSE.txt           │
+│ aws-c-common       │ Apache       │ /contrib/aws-c-common/LICENSE       │
+│ aws-c-event-stream │ Apache       │ /contrib/aws-c-event-stream/LICENSE │
+│ aws-checksums      │ Apache       │ /contrib/aws-checksums/LICENSE      │
+│ aws                │ Apache       │ /contrib/aws/LICENSE.txt            │
+│ base64             │ BSD 2-clause │ /contrib/base64/LICENSE             │
+│ boost              │ Boost        │ /contrib/boost/LICENSE_1_0.txt      │
+│ brotli             │ MIT          │ /contrib/brotli/LICENSE             │
+│ capnproto          │ MIT          │ /contrib/capnproto/LICENSE          │
+│ cassandra          │ Apache       │ /contrib/cassandra/LICENSE.txt      │
+│ cctz               │ Apache       │ /contrib/cctz/LICENSE.txt           │
+│ cityhash102        │ MIT          │ /contrib/cityhash102/COPYING        │
+│ cppkafka           │ BSD 2-clause │ /contrib/cppkafka/LICENSE           │
+└────────────────────┴──────────────┴─────────────────────────────────────┘
+
+```
+
 ## system.databases {#system-databases}
 
 This table contains a single String column called ‘name’ – the name of a database.
