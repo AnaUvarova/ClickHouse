@@ -1218,7 +1218,7 @@ randomFixedString(length);
 
 **Returned value(s)**
 
--   String contains generated random symbols.
+-   String of random symbols.
 
 Type: [String](../../sql-reference/data-types/string.md).
 
