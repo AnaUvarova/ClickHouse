@@ -1214,7 +1214,7 @@ randomFixedString(length);
 
 **Parameters**
 
--   `length` — Length to put in the function number of symbols we need to generate. Length is a natural number. [UInt64](../../sql-reference/data-types/int-uint.md).
+-   `length` — Required number of symbols in the resulting string. [UInt64](../../sql-reference/data-types/int-uint.md).
 
 **Returned value(s)**
 
