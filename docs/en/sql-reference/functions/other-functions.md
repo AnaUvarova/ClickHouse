@@ -1204,7 +1204,7 @@ SELECT number, randomPrintableASCII(30) as str, length(str) FROM system.numbers 
 
 ## randomFixedString {#randomfixedstring}
 
-Generates a random string of a specified length.
+Generates a random string of a specified length. Symbols in use — all the bytes, including the null.
 
 **Syntax**
 
