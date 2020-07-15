@@ -1200,4 +1200,41 @@ SELECT number, randomPrintableASCII(30) as str, length(str) FROM system.numbers 
 └────────┴────────────────────────────────┴──────────────────────────────────┘
 ```
 
+## randomStringUTF8 {#randomstringutf8}
+
+Generates a random string of a specified length. Result string contains valid UTF8 code points.
+
+**Syntax**
+
+``` sql
+randomStringUTF8(length);
+```
+
+**Parameters**
+
+-   `length` — Required number of symbols in the resulting string. [UInt64](../../sql-reference/data-types/int-uint.md).
+
+**Returned value(s)**
+
+-   String of random symbols using UTF8-code.
+
+Type: [String](../../sql-reference/data-types/string.md).
+
+**Example**
+
+Query:
+
+```sql 
+SELECT randomStringUTF8(13)
+```
+
+Result:
+
+```text 
+┌─randomStringUTF8(13)─┐
+│ 𘤗𙉝д兠庇󡅴󱱎󦐪􂕌𔊹𓰛   │
+└──────────────────────┘
+
+```
+
 [Original article](https://clickhouse.tech/docs/en/query_language/functions/other_functions/) <!--hide-->
