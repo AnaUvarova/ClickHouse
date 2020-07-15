@@ -144,7 +144,7 @@ SELECT * FROM system.contributors WHERE name='Olga Khvostikova'
 Columns:
 
 - `library_name` ([String](../sql-reference/data-types/string.md)) — Name of the library, which is license connected with.
-- `license_type` ([String](../sql-reference/data-types/string.md)) — Type of the system licenses — e.g. Apache, MIT. 
+- `license_type` ([String](../sql-reference/data-types/string.md)) — License type — e.g. Apache, MIT. 
 - `license_path` ([String](../sql-reference/data-types/string.md)) — Path to the license file.
 - `license_text` ([String](../sql-reference/data-types/string.md)) — License text.
 
