@@ -137,7 +137,7 @@ SELECT * FROM system.contributors WHERE name='Olga Khvostikova'
 └──────────────────┘
 ```
 
-## system.licenses {#system-tables_system.licenses} system.licenses
+## system.licenses {#system-tables_system.licenses}
 
 Сontains licenses of third-party libraries that are located in the `contrib` directory of ClickHouse sources. 
 
