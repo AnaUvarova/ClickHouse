@@ -146,7 +146,7 @@ Columns:
 - `library_name` ([String](../sql-reference/data-types/string.md)) — Name of the library, which is license connected with.
 - `license_type` ([String](../sql-reference/data-types/string.md)) — Type of the system licenses — e.g. Apache, MIT. 
 - `license_path` ([String](../sql-reference/data-types/string.md)) — Path to the specific license. Where you can find it. Could be txt-formatted.
-- `license_text` ([String](../sql-reference/data-types/string.md)) — Textual content of the license. Legacy,  terms and conditions and so on. Could be very long, you know.
+- `license_text` ([String](../sql-reference/data-types/string.md)) — License text.
 
 **Example**
 
