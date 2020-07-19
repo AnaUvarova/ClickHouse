@@ -129,7 +129,7 @@ SELECT * FROM system.contributors WHERE name='Olga Khvostikova'
 
 Столбцы:
 
-- `library_name` ([String](../sql-reference/data-types/string.md)) — Название библиотеки, к которой относится лиценизия.
+- `library_name` ([String](../sql-reference/data-types/string.md)) — Название библиотеки, к которой относится лицензия.
 - `license_type` ([String](../sql-reference/data-types/string.md)) — Тип лицензии — например, Apache, MIT. 
 - `license_path` ([String](../sql-reference/data-types/string.md)) — Путь к файлу лицензии.
 - `license_text` ([String](../sql-reference/data-types/string.md)) — Текст лицензии.
