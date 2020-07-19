@@ -125,7 +125,7 @@ SELECT * FROM system.contributors WHERE name='Olga Khvostikova'
 
 ## system.licenses {#system-tables_system.licenses}
 
-Содержит информацию о лицензиях третьесторонних библиотек, которые находятся в директории `contrib` исходных материалов ClickHouse.
+Содержит информацию о лицензиях сторонних библиотек, которые находятся в директории `contrib` исходных кодов ClickHouse.
 
 Столбцы:
 
