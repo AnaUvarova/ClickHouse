@@ -1216,7 +1216,7 @@ randomStringUTF8(length);
 
 **Returned value(s)**
 
--   String of random symbols using UTF8-code.
+-   UTF-8 random string.
 
 Type: [String](../../sql-reference/data-types/string.md).
 
