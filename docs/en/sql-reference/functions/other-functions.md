@@ -1212,7 +1212,7 @@ randomStringUTF8(length);
 
 **Parameters**
 
--   `length` — Required number of symbols in the resulting string. [UInt64](../../sql-reference/data-types/int-uint.md).
+-   `length` — Required length of the resulting string in code points. [UInt64](../../sql-reference/data-types/int-uint.md).
 
 **Returned value(s)**
 
