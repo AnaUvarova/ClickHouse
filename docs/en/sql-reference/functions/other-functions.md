@@ -1202,7 +1202,7 @@ SELECT number, randomPrintableASCII(30) as str, length(str) FROM system.numbers 
 
 ## randomStringUTF8 {#randomstringutf8}
 
-Generates a random string of a specified length. Result string contains valid UTF8 code points.
+Generates a random string of a specified length. Result string contains valid UTF-8 symbols.
 
 **Syntax**
 
