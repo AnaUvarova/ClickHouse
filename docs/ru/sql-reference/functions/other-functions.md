@@ -1153,4 +1153,41 @@ SELECT number, randomPrintableASCII(30) as str, length(str) FROM system.numbers 
 └────────┴────────────────────────────────┴──────────────────────────────────┘
 ```
 
+## randomFixedString {#randomfixedstring}
+
+Генерирует строку фиксированной длины. Строка содержит случайный набор всех байтов, включая нулевой. 
+
+**Синтаксис**
+
+``` sql
+randomFixedString(length);
+```
+
+**Параметры**
+
+-   `length` — Задайте количество символов в итоговой строке. [UInt64](../../sql-reference/data-types/int-uint.md).
+
+**Возвращаемое значение**
+
+-   Строка со случайными символами.
+
+Тип: [String](../../sql-reference/data-types/string.md).
+
+**Пример**
+
+Запрос:
+
+```sql 
+SELECT randomFixedString(13)
+```
+
+Результат:
+
+```text 
+    ┌─randomFixedString(13)─┐
+    │ ▒E▒\▒▒{ ki▒▒▒         │
+    └───────────────────────┘
+
+```
+
 [Оригинальная статья](https://clickhouse.tech/docs/ru/query_language/functions/other_functions/) <!--hide-->
