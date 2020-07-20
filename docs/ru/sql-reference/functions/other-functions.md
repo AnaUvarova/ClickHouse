@@ -1169,7 +1169,7 @@ randomFixedString(length);
 
 **Возвращаемое значение**
 
--   Строка со случайными символами.
+-   Строка, состоящая из случайных символов.
 
 Тип: [String](../../sql-reference/data-types/string.md).
 
