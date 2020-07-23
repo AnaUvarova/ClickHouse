@@ -1220,9 +1220,10 @@ randomFixedString(length);
 
 -   String of random symbols.
 
-Type: [String](../../sql-reference/data-types/string.md).
+Type: [FixedString](../../sql-reference/data-types/fixedstring.md).
 
 **Example**
+***Result of the function***
 
 Query:
 
@@ -1236,5 +1237,21 @@ Result:
     ┌─randomFixedString(13)─┐
     │ ▒E▒\▒▒{ ki▒▒▒         │
     └───────────────────────┘
+
+```
+***The result`s type***
+
+Query:
+
+```sql
+SELECT randomFixedString(13) as rnd, toTypeName(rnd)
+```
+
+Result:
+
+```text
+┌─rnd──────┬─toTypeName(randomFixedString(13))─┐
+│ j▒h㋖HɨZ'▒ │ FixedString(13)                 │
+└──────────┴───────────────────────────────────┘
 
 ```
