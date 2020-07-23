@@ -1186,16 +1186,16 @@ SELECT randomFixedString(13)
 Результат:
 
 ```text 
-    ┌─randomFixedString(13)─┐
-    │ ▒E▒\▒▒{ ki▒▒▒         │
-    └───────────────────────┘
+┌─randomFixedString(13)─┐
+│ ▒E▒\▒▒{ ki▒▒▒         │
+└───────────────────────┘
 
 ```
 *Тип возвращаемого*
 
 Запрос:
 
- ```sql
+```sql
 SELECT randomFixedString(13) as rnd, toTypeName(rnd)
 ```
 

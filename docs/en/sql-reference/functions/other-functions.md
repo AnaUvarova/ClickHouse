@@ -1234,10 +1234,10 @@ SELECT randomFixedString(13)
 
 Result:
 
-```text 
-    ┌─randomFixedString(13)─┐
-    │ ▒E▒\▒▒{ ki▒▒▒         │
-    └───────────────────────┘
+```text
+┌─randomFixedString(13)─┐
+│ ▒E▒\▒▒{ ki▒▒▒         │
+└───────────────────────┘
 
 ```
 *The result`s type*
