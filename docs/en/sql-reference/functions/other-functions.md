@@ -1223,7 +1223,8 @@ randomFixedString(length);
 Type: [FixedString](../../sql-reference/data-types/fixedstring.md).
 
 **Example**
-***Result of the function***
+
+*Result of the function*
 
 Query:
 
@@ -1239,7 +1240,7 @@ Result:
     └───────────────────────┘
 
 ```
-***The result`s type***
+*The result`s type*
 
 Query:
 

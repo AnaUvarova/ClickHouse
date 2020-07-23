@@ -1175,6 +1175,8 @@ randomFixedString(length);
 
 **Пример**
 
+*Возвращаемое*
+
 Запрос:
 
 ```sql 
@@ -1187,6 +1189,22 @@ SELECT randomFixedString(13)
     ┌─randomFixedString(13)─┐
     │ ▒E▒\▒▒{ ki▒▒▒         │
     └───────────────────────┘
+
+```
+*Тип возвращаемого*
+
+Запрос:
+
+ ```sql
+SELECT randomFixedString(13) as rnd, toTypeName(rnd)
+```
+
+Результат:
+
+```text
+┌─rnd──────┬─toTypeName(randomFixedString(13))─┐
+│ j▒h㋖HɨZ'▒ │ FixedString(13)                 │
+└──────────┴───────────────────────────────────┘
 
 ```
 
