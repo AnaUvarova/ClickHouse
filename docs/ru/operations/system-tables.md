@@ -15,7 +15,7 @@
 
 Столбцы:
 
--   `metric` ([String](../sql-reference/data-types/string.md)) — название метрики.
+-   `metric` [String](../sql-reference/data-types/string.md)) — название метрики.
 -   `value` ([Float64](../sql-reference/data-types/float.md)) — значение метрики.
 
 **Пример**
@@ -78,7 +78,7 @@ SELECT * FROM system.asynchronous_metric_log LIMIT 10
 ```
 
 **Смотрите также**
-- [system.asynchronous\_metrics](../../operations/system-tables/asynchronous_metrics.md) — Содержит метрики, которые периодически вычисляются в фоновом режиме. 
+- [system.asynchronous\_metrics](#system_tables-asynchronous_metrics) — Содержит метрики, которые периодически вычисляются в фоновом режиме. 
 - [system.metric\_log](#system_tables-metric_log) — таблица фиксирующая историю значений метрик из `system.metrics` и `system.events`.
 
 ## system.clusters {#system-clusters}
