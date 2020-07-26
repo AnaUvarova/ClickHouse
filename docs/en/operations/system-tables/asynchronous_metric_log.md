@@ -1,11 +1,12 @@
 ## system.asynchronous\_metric\_log {#system-tables-async-log}
 
-Contains the historical values for `system.asynchronous_metrics`, which are saved once per minute. This function is available on default.
+Contains the historical values for `system.asynchronous_metrics`, which are saved once per minute. This feature is enabled by default.
 
 Columns:
--   `event_date` ([Date](../../sql-reference/data-types/date.md)) — Day of the event.
--   `event_time` ([DateTime](../../sql-reference/data-types/datetime.md)) — Exact time of the event.
--   `name` ([String](../../sql-reference/data-types/string.md)) — Name of the metric envolved.
+
+-   `event_date` ([Date](../../sql-reference/data-types/date.md)) — Event date.
+-   `event_time` ([DateTime](../../sql-reference/data-types/datetime.md)) — Event time.
+-   `name` ([String](../../sql-reference/data-types/string.md)) — Metric name.
 -   `value` ([Float64](../../sql-reference/data-types/float.md)) — Metric value.
 
 **Example**
